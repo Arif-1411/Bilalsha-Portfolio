@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expert Portfolio | Digital Experience</title>
-    <meta name="description" content="Portfolio of an 8-year experienced website builder specializing in premium digital experiences.">
+    <title>Bilalsha Jamali Nizami Tanur | Islamic Scholar & Researcher</title>
+    <meta name="description" content="Portfolio of Bilalsha Jamali Nizami Tanur, a Sunni Researcher and Public Educator advancing authentic Ahl al-Sunnah wal Jama'ah.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,28 +22,337 @@
 
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="copy.css">
 
-   
+    <!-- Custom CSS (Exact Style Implementation) -->
+    <style>
+        /* =========================================================
+           FINALIZED & CONSIDATED CSS (RESPONSIVE HARDENED)
+           ========================================================= */
+
+        /* ===============================
+           0) RESPONSIVE HARDENING (GLOBAL SAFETY)
+           =============================== */
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { width: 100%; overflow-x: hidden; }
+        img, video, svg, canvas { max-width: 100%; height: auto; }
+        h1, h2, h3, h4, h5, h6, p, a, li, .nav-link, .btn-emerald, .btn-primary-custom, .btn-outline-custom { overflow-wrap: anywhere; }
+        @media (prefers-reduced-motion: reduce) {
+          * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+        }
+
+        /* ===============================
+           1) VARIABLES & GLOBAL STYLES
+           =============================== */
+        :root {
+          /* Fonts */
+          --font-sans: "Poppins", sans-serif;
+          --font-heading: "Raleway", sans-serif;
+          --font-serif: "Merriweather", serif;
+
+          /* Colors (Tailwind Slate) */
+          --slate-50: #f8fafc;
+          --slate-100: #f1f5f9;
+          --slate-200: #e2e8f0;
+          --slate-400: #94a3b8;
+          --slate-500: #64748b;
+          --slate-600: #475569;
+          --slate-700: #334155;
+          --slate-800: #1e293b;
+          --slate-900: #0f172a;
+
+          /* Colors (Tailwind Emerald) */
+          --emerald-50: #ecfdf5;
+          --emerald-100: #d1fae5;
+          --emerald-200: #a7f3d0;
+          --emerald-500: #10b981;
+          --emerald-600: #059669;
+          --emerald-700: #047857;
+          --emerald-900: #064e3b;
+
+          /* Selection */
+          --selection-bg: var(--emerald-100);
+          --selection-text: var(--emerald-900);
+        }
+
+        ::selection { background: var(--selection-bg); color: var(--selection-text); }
+
+        body {
+          font-family: var(--font-sans);
+          background-color: var(--slate-50);
+          color: var(--slate-700);
+          -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); color: var(--slate-800); }
+        a { text-decoration: none; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: var(--emerald-500); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--emerald-600); }
+
+
+        /* ===============================
+           2) UTILITIES (Tailwind-like)
+           =============================== */
+        .text-emerald { color: var(--emerald-600) !important; }
+        .bg-emerald { background-color: var(--emerald-600) !important; }
+        .text-slate-500 { color: var(--slate-500) !important; }
+        .text-slate-600 { color: var(--slate-600) !important; }
+        .bg-slate-50 { background-color: var(--slate-50) !important; }
+        .bg-slate-900 { background-color: var(--slate-900) !important; }
+        .section-padding { padding: 5rem 0; }
+        .rounded-2xl { border-radius: 1rem !important; }
+        .rounded-3xl { border-radius: 1.5rem !important; }
+        .rounded-4xl { border-radius: 2rem !important; }
+
+        .shadow-custom { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); }
+        .shadow-custom-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
+        .shadow-custom-2xl { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+        .object-cover { object-fit: cover; width: 100%; height: 100%; }
+
+
+        /* ===============================
+           3) BUTTONS
+           =============================== */
+        .btn-emerald, .btn-primary-custom, .btn-outline-custom, .contact-submit-btn {
+          max-width: 100%; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+        }
+
+        .btn-emerald {
+          background-color: var(--emerald-600); color: #fff; border-radius: 999px; padding: 0.75rem 2rem; font-weight: 600; transition: all 0.3s ease; border: none;
+        }
+        .btn-emerald:hover { background-color: var(--emerald-700); color: #fff; box-shadow: 0 0 0 4px var(--emerald-100); }
+
+        .btn-primary-custom {
+          background-color: var(--emerald-600); color: #fff; padding: 0.75rem 2rem; border-radius: 999px; font-weight: 600; border: 2px solid var(--emerald-600); transition: all 0.3s ease;
+        }
+        .btn-primary-custom:hover { background-color: var(--emerald-700); border-color: var(--emerald-700); }
+
+        .btn-outline-custom {
+          background: transparent; color: var(--slate-700); padding: 0.75rem 2rem; border-radius: 999px; font-weight: 600; border: 2px solid var(--slate-200); transition: all 0.3s ease;
+        }
+        .btn-outline-custom:hover { border-color: var(--emerald-600); color: var(--emerald-600); }
+
+
+        /* ===============================
+           4) NAVBAR / HEADER
+           =============================== */
+        .navbar { transition: all 0.3s ease; padding: 1rem 0; background-color: transparent; }
+        .navbar.scrolled { background-color: #fff; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); padding: 0.5rem 0; }
+        .navbar-brand { font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem; color: var(--slate-800); }
+        .nav-link { color: var(--slate-600) !important; font-weight: 500; transition: color 0.3s ease; }
+        .nav-link:hover { color: var(--emerald-600) !important; }
+
+
+        /* ===============================
+           HERO SECTION
+           =============================== */
+        #hero.hero { position: relative; overflow: hidden; background: var(--slate-50); padding-block: clamp(5rem, 8vw, 7.5rem) clamp(3rem, 5vw, 4.5rem); }
+        #hero .row { row-gap: 2.5rem; }
+        #hero .hero-title { font-family: var(--font-heading); font-weight: 800; line-height: 1.12; color: var(--slate-900); letter-spacing: -0.02em; font-size: clamp(2.1rem, 3.4vw + 1rem, 3.6rem); }
+        #hero .hero-content { max-width: 38rem; }
+        #hero .hero-actions { gap: 0.9rem !important; }
+
+        @media (max-width: 576px){ #hero .hero-actions a { width: 100%; justify-content: center; } }
+
+        #hero .hero-visual { position: relative; display: grid; place-items: center; }
+        #hero .hero-frame { position: relative; width: min(520px, 100%); padding: 14px; }
+        #hero .hero-frame::before {
+          content: ""; position: absolute; inset: 0; border-radius: 1.75rem;
+          background: radial-gradient(1200px 500px at 20% 0%, rgba(16,185,129,0.22), transparent 55%),
+                      radial-gradient(900px 450px at 90% 70%, rgba(16,185,129,0.18), transparent 55%),
+                      linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.2));
+          box-shadow: 0 30px 70px -45px rgba(15,23,42,0.55); z-index: 0;
+        }
+        #hero .hero-visual img {
+          position: relative; z-index: 2; display: block; width: 100%; height: auto; max-width: 480px; border-radius: 1.5rem; object-fit: cover;
+          box-shadow: 0 28px 60px -35px rgba(15,23,42,0.65), 0 10px 25px -18px rgba(15,23,42,0.35); transform: translateZ(0);
+        }
+
+        #hero .background-elements { position: absolute; inset: -18px; z-index: 1; pointer-events: none; }
+        #hero .background-elements .element { position: absolute; border-radius: 999px; filter: blur(0px); opacity: 0.9; }
+        #hero .element-1 { width: 210px; height: 210px; top: -18px; right: -18px; background: rgba(16,185,129,0.14); animation: heroFloat 7s ease-in-out infinite; }
+        #hero .element-2 { width: 160px; height: 160px; bottom: -24px; left: -24px; background: rgba(16,185,129,0.20); animation: heroFloat 9s ease-in-out infinite reverse; }
+        #hero .element-3 { width: 84px; height: 84px; top: 42%; right: -42px; border: 4px solid var(--emerald-600); background: transparent; opacity: 0.28; animation: heroFloat 6s ease-in-out infinite; }
+
+        @keyframes heroFloat { 0% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-16px,0); } 100% { transform: translate3d(0,0,0); } }
+        @media (prefers-reduced-motion: reduce){ #hero .element-1, #hero .element-2, #hero .element-3{ animation: none !important; } }
+        @media (max-width: 991px){
+          #hero.hero { padding-block: 5.25rem 3.25rem; }
+          #hero .hero-content { max-width: 42rem; margin-inline: auto; text-align: center; }
+          #hero .hero-actions { justify-content: center; }
+          #hero .element-1 { width: 180px; height: 180px; }
+          #hero .element-2 { width: 140px; height: 140px; }
+          #hero .element-3 { width: 72px; height: 72px; right: -34px; }
+        }
+        @media (max-width: 420px){ #hero .hero-title br{ display: none; } }
+
+
+        /* ===============================
+           ABOUT SECTION
+           =============================== */
+        .check-list-item h5 { font-size: 1.125rem; font-weight: 700; margin-bottom: 0.25rem; }
+        #about .about-card { background: var(--slate-50); border: 1px solid var(--slate-100); border-radius: 1.5rem; padding: 2rem; box-shadow: 0 20px 40px -30px rgba(15, 23, 42, 0.30); }
+        #about .about-media img { display: block; width: 100%; height: 100%; }
+
+        @media (max-width: 991px){
+          #about .about-card { padding-bottom: 4.25rem; }
+          #about .about-visual { max-width: 420px; margin: -3rem auto 0; position: relative; z-index: 2; }
+          #about .about-media { border: 6px solid #fff; border-radius: 1.5rem; box-shadow: 0 25px 55px -35px rgba(15, 23, 42, 0.55); transform: rotate(-1.25deg); }
+        }
+        @media (max-width: 576px){
+          #about .about-card { padding: 1.5rem; padding-bottom: 3.75rem; }
+          #about .about-visual { max-width: 340px; margin-top: -2.5rem; }
+          #about .about-media { transform: rotate(-1deg); }
+        }
+
+
+        /* ===============================
+           SERVICES SECTION
+           =============================== */
+        .service-card { border: 1px solid var(--slate-100); transition: all 0.3s ease; height: 100%; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); border-color: transparent; }
+        .service-icon { width: 3.5rem; height: 3.5rem; background-color: var(--emerald-50); color: var(--emerald-600); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; font-size: 1.875rem; transition: all 0.3s ease; }
+        .service-card:hover .service-icon { background-color: var(--emerald-600); color: #fff; }
+        .service-card:hover h3 { color: var(--emerald-600); }
+
+
+        /* ===============================
+           ENGAGEMENT (TABS)
+           =============================== */
+        .border-slate-100 { border-color: var(--slate-100) !important; }
+        @media (min-width: 992px) { .border-end-lg { border-right: 1px solid var(--slate-100) !important; } }
+        @media (max-width: 991px) { .border-end-lg { border-right: 0 !important; } }
+
+        #engagement .nav-pills { gap: 0.5rem; }
+        #engagement .nav-pills .nav-link {
+          position: relative; border: 1px solid transparent; background: transparent; transition: background-color .25s ease, color .25s ease, border-color .25s ease, transform .15s ease; outline: none; text-align: left; color: var(--slate-500); font-weight: 600; font-size: 1.125rem; padding: 1rem 1.5rem; border-left: 4px solid transparent; border-radius: 0.5rem; white-space: normal; word-break: break-word;
+        }
+        #engagement .nav-pills .nav-link:focus-visible { outline: 2px solid var(--emerald-500); outline-offset: 2px; border-radius: 0.75rem; }
+        #engagement .nav-pills .nav-link:hover { background-color: var(--slate-50); color: var(--slate-800); }
+        #engagement .nav-pills .nav-link.active { background: rgba(16,185,129,0.06); border-color: rgba(16,185,129,0.25); box-shadow: 0 12px 26px -22px rgba(16,185,129,0.7); color: var(--emerald-600); border-left-color: var(--emerald-600); }
+
+        @media (max-width: 991px) {
+          #engagement .col-lg-3 { padding-bottom: 1rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--slate-100); }
+          #engagement .nav-pills { flex-direction: row !important; flex-wrap: nowrap !important; overflow-x: auto; -webkit-overflow-scrolling: touch; gap: 0.75rem; padding: 0.25rem 0.25rem 0.5rem; scroll-snap-type: x mandatory; border-right: none !important; border-bottom: none; margin-bottom: 0; }
+          #engagement .nav-pills .nav-link { white-space: nowrap; scroll-snap-align: start; border: 1px solid var(--slate-200); border-radius: 999px; padding: 0.75rem 1rem; border-left: none !important; }
+          #engagement .nav-pills .nav-link.active { border-color: rgba(16,185,129,0.45); border-bottom-color: rgba(16,185,129,0.45); }
+        }
+
+        @media (min-width: 992px) { #engagement #v-pills-tab { position: sticky; top: 6rem; } }
+        
+        #engagement .tab-pane.fade { transform: translateY(6px); transition: opacity .25s ease, transform .25s ease; }
+        #engagement .tab-pane.fade.show { transform: translateY(0); }
+        #engagement .tab-img-container { aspect-ratio: 3 / 4; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border: 1px solid var(--slate-100); background: #fff; }
+        @supports not (aspect-ratio: 3 / 4) {
+          .tab-img-container { position: relative; }
+          .tab-img-container::before { content: ""; display: block; padding-top: 133.3333%; }
+          .tab-img-container > * { position: absolute; inset: 0; }
+        }
+        @media (max-width: 768px){ #engagement .tab-img-container { aspect-ratio: 4 / 3; } }
+        @media (max-width: 576px){ #engagement .tab-img-container { aspect-ratio: 16 / 10; } }
+        @media (prefers-reduced-motion: reduce){ #engagement .tab-pane.fade { transform: none !important; transition: none !important; } #engagement .nav-pills .nav-link { transition: none !important; } }
+
+
+        /* ===============================
+           YOUTUBE SECTION
+           =============================== */
+        #youtube-narrative .video-thumbnail { position: relative; overflow: hidden; background-color: var(--slate-200); cursor: pointer; transform: translateZ(0); }
+        #youtube-narrative .video-thumbnail img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1); transition: transform 0.7s ease; }
+        #youtube-narrative .video-thumbnail:hover img { transform: scale(1.03); }
+        #youtube-narrative .row[data-aos="zoom-in"] .video-thumbnail:hover img { transform: scale(1.06); }
+        #youtube-narrative .play-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.35), rgba(0,0,0,0.10)); display: flex; align-items: center; justify-content: center; transition: background 0.3s ease; }
+        #youtube-narrative .video-thumbnail:hover .play-overlay { background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.18)); }
+        #youtube-narrative .play-icon { font-size: 4rem; color: rgba(255,255,255,0.85); filter: drop-shadow(0 18px 40px rgba(0,0,0,0.35)); transition: transform 0.3s ease, color 0.3s ease; }
+        #youtube-narrative .video-thumbnail:hover .play-icon { color: #fff; transform: scale(1.08); }
+        #youtube-narrative .video-featured-img { opacity: 0.55; }
+        #youtube-narrative .video-featured-thumb { min-height: clamp(220px, 40vw, 420px); }
+        
+        @media (max-width: 576px){
+          #youtube-narrative .video-featured-body { padding: 1.75rem !important; }
+          #youtube-narrative .play-icon { font-size: 2.8rem; }
+        }
+
+        #youtube-narrative .group { position: relative; isolation: isolate; }
+        #youtube-narrative .blob { position: absolute; inset: -1rem; border-radius: 60% 40% 55% 45%; filter: blur(40px); z-index: 0; opacity: 0; transition: opacity 0.5s ease; }
+        #youtube-narrative .group:hover .blob { opacity: 1; }
+        #youtube-narrative .z-2 { z-index: 2; position: relative; }
+        @media (max-width: 991px){ #youtube-narrative .text-lg-end { text-align: left !important; } }
+        @media (prefers-reduced-motion: reduce){ #youtube-narrative .video-thumbnail img, #youtube-narrative .play-overlay, #youtube-narrative .play-icon, #youtube-narrative .blob { transition: none !important; } }
+
+
+        /* ===============================
+           CONTACT SECTION
+           =============================== */
+        .contact-input { width: 100%; padding: 0.75rem 1rem; border-radius: 0.5rem; background-color: var(--slate-50); border: 1px solid var(--slate-200); outline: none; transition: all 0.2s ease; font-size: 16px; }
+        .contact-input:focus { border-color: var(--emerald-500); box-shadow: 0 0 0 2px var(--emerald-200); }
+        .contact-decoration-1 { position: absolute; top: 0; right: 0; width: 16rem; height: 16rem; background-color: rgba(16, 185, 129, 0.1); border-radius: 50%; filter: blur(60px); transform: translate(50%, -50%); }
+        .contact-decoration-2 { position: absolute; bottom: 0; left: 0; width: 16rem; height: 16rem; background-color: rgba(59, 130, 246, 0.1); border-radius: 50%; filter: blur(60px); transform: translate(-50%, 50%); }
+        .contact-icon-box { width: 3rem; height: 3rem; background-color: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; }
+
+        .contact-submit-btn {
+          border-radius: 999px; background-color: var(--slate-900); color: #fff; padding: 0.75rem 2.5rem; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.03em; border: 1px solid transparent; display: inline-flex; align-items: center; gap: 0.4rem; box-shadow: 0 12px 30px -15px rgba(15, 23, 42, 0.8); transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+        }
+        .contact-submit-btn:hover { background-color: var(--slate-800); border-color: var(--emerald-500); box-shadow: 0 18px 40px -18px rgba(15, 23, 42, 0.9); transform: translateY(-1px); }
+        .contact-submit-btn:active { transform: translateY(0); box-shadow: 0 8px 22px -12px rgba(15, 23, 42, 0.85); }
+        .contact-submit-btn:focus-visible { outline: 2px solid var(--emerald-500); outline-offset: 2px; }
+        .contact-submit-btn i { font-size: 1rem; }
+
+
+        /* ===============================
+           FOOTER
+           =============================== */
+        .social-link { width: 2.5rem; height: 2.5rem; background-color: var(--slate-200); color: var(--slate-600); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; transition: all 0.3s ease; }
+        .social-link:hover { color: #fff; }
+        .social-link.yt:hover { background-color: #dc2626; }
+        .social-link.fb:hover { background-color: #2563eb; }
+        .social-link.ig:hover { background-color: #db2777; }
+        .social-link.tw:hover { background-color: #000; }
+
+        /* ===============================
+           RESPONSIVE MOBILE ADJUSTMENTS
+           =============================== */
+        @media (max-width: 991px) {
+          #hero { padding: 5rem 0 3rem; }
+          .hero-visual { margin-top: 2.5rem; }
+          .hero-visual img { max-width: 100%; }
+        }
+        @media (max-width: 768px) {
+          .section-padding { padding: 4rem 0; }
+          .nav-pills .nav-link { padding: 0.9rem 1.1rem; font-size: 1.05rem; }
+        }
+        @media (max-width: 576px) {
+          .section-padding { padding: 3.25rem 0; }
+          .btn-emerald, .btn-primary-custom, .btn-outline-custom { padding: 0.7rem 1.4rem; }
+          .contact-submit-btn { width: 100%; }
+        }
+        @media (max-width: 380px) {
+          .btn-emerald, .btn-primary-custom, .btn-outline-custom { padding: 0.65rem 1.1rem; }
+          .nav-pills .nav-link { padding: 0.85rem 1rem; }
+        }
+    </style>
 </head>
 <body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#"><span class="text-emerald">Dev</span>Expert</a>
+            <a class="navbar-brand" href="#"><span class="text-emerald">Bilalsha</span> <span class="d-none d-md-inline">Jamali Nizami Tanur</span><span class="d-md-none">J.N.T</span></a>
             <button class="navbar-toggler border-0 focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars text-slate-700 text-xl"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto gap-lg-4 text-center mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Expertise</a></li>
                     <li class="nav-item"><a class="nav-link" href="#engagement">Engagement</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#youtube-narrative">Content</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
                 <div class="ms-lg-4 mt-3 mt-lg-0 text-center">
-                    <a href="#contact" class="btn-emerald text-sm">Let's Talk</a>
+                    <a href="#contact" class="btn-emerald text-sm">Invite for Lecture</a>
                 </div>
             </div>
         </div>
@@ -56,17 +365,17 @@
                 <div class="col-lg-6 order-lg-1 order-2">
                     <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
                         <span class="d-inline-block py-1 px-3 rounded-pill bg-emerald-100 text-emerald-900 text-xs font-bold mb-4 tracking-wide uppercase">
-                            Experienced Website Builder
+                            Islamic Scholar & Researcher
                         </span>
                         <h1 class="hero-title mb-4">
-                            Architecting <span class="text-emerald">Digital Excellence</span><br>at Enterprise Scale
+                            BILALSHA JAMALI<br> <span class="text-emerald">NIZAMI TANUR</span>
                         </h1>
                         <p class="lead text-slate-600 mb-5 text-lg">
-                            Leveraging 8 years of high-stakes development experience to build resilient, revenue-generating digital ecosystems for forward-thinking brands.
+                            Sunni Researcher & Public Educator. Advancing authentic Ahl al-Sunnah wal Jama'ah through scholarship, reasoned discourse, and intellectual clarity.
                         </p>
                         <div class="hero-actions d-flex flex-wrap">
-                            <a href="#services" class="btn-primary-custom">My Services</a>
-                            <a href="#youtube-narrative" class="btn-outline-custom">View Content</a>
+                            <a href="#about" class="btn-primary-custom">Read About</a>
+                            <a href="#engagement" class="btn-outline-custom">Public Engagement</a>
                         </div>
                     </div>
                 </div>
@@ -81,7 +390,7 @@
                         
                         <!-- Main Visual -->
                         <div class="hero-frame">
-                            <img src="Bilalsha.jpeg" alt="Professional Web Developer" loading="eager">
+                            <img src="Bilalsha.jpeg"  alt="Bilalsha Jamali Nizami Tanur" loading="eager">
                         </div>
                     </div>
                 </div>
@@ -96,37 +405,37 @@
                 <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
                     <div class="about-card">
                         <h6 class="text-emerald font-bold tracking-wider uppercase mb-2">Executive Profile</h6>
-                        <h2 class="h1 font-bold mb-4">Engineering Business Value</h2>
+                        <h2 class="h1 font-bold mb-4">About Bilalsha Jamali Nizami Tanur</h2>
                         <p class="text-slate-600 mb-4 text-lg">
-                            With an 8-year track record, I move beyond basic development to offer technical partnership. My methodology combines rigorous engineering standards with strategic business insight, ensuring every line of code serves your bottom line.
+                            A traditionally trained Islamic scholar whose academic grounding is firmly rooted in classical Sunni scholarship. He harmonizes time-honored Islamic sciences with methodical reasoning, presenting orthodox teachings with accuracy and clarity.
                         </p>
                         <div class="row g-4 mt-2">
                             <div class="col-sm-6">
                                 <div class="check-list-item">
                                     <i class="fas fa-check-circle text-emerald me-2"></i>
-                                    <h5>Systematic Precision</h5>
-                                    <p class="text-sm text-slate-500">Component-driven architectures that ensure consistency.</p>
+                                    <h5>Classical Grounding</h5>
+                                    <p class="text-sm text-slate-500">Aligned with authentic scholarship and orthodox methodology.</p>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="check-list-item">
                                     <i class="fas fa-check-circle text-emerald me-2"></i>
-                                    <h5>Enterprise Performance</h5>
-                                    <p class="text-sm text-slate-500">Optimizing for Core Web Vitals and high-load traffic.</p>
+                                    <h5>Reasoned Theology</h5>
+                                    <p class="text-sm text-slate-500">Clear, structured argumentation integrating rational analysis.</p>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="check-list-item">
                                     <i class="fas fa-check-circle text-emerald me-2"></i>
-                                    <h5>Adaptive Frameworks</h5>
-                                    <p class="text-sm text-slate-500">Future-proof layouts designed for device evolution.</p>
+                                    <h5>Public Engagement</h5>
+                                    <p class="text-sm text-slate-500">Responsible, scholarly discourse against misinterpretations.</p>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="check-list-item">
                                     <i class="fas fa-check-circle text-emerald me-2"></i>
-                                    <h5>Inclusive Compliance</h5>
-                                    <p class="text-sm text-slate-500">WCAG 2.1 compliance for universal market reach.</p>
+                                    <h5>Intellectual Clarity</h5>
+                                    <p class="text-sm text-slate-500">Clarifying misconceptions with textual evidence.</p>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +444,7 @@
                 <div class="col-lg-5 offset-lg-1" data-aos="fade-up">
                     <div class="about-visual">
                         <div class="about-media overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Working on code" class="object-cover">
+                            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=800&auto=format&fit=crop" alt="Scholar Reading" class="object-cover">
                         </div>
                     </div>
                 </div>
@@ -147,42 +456,53 @@
     <section id="services" class="section-padding bg-slate-50">
         <div class="container">
             <div class="text-center max-w-2xl mx-auto mb-5" data-aos="fade-up">
-                <h6 class="text-emerald font-bold tracking-wider uppercase mb-2">Capabilities</h6>
-                <h2 class="h1 font-bold mb-3">Strategic Technical Solutions</h2>
-                <p class="text-slate-600">Delivering robust infrastructure and high-level strategy for complex digital challenges.</p>
+                <h6 class="text-emerald font-bold tracking-wider uppercase mb-2">Areas of Expertise</h6>
+                <h2 class="h1 font-bold mb-3">Classical Scholarship</h2>
+                <p class="text-slate-600">Reasoned discourse and accessible teaching grounded in authentic tradition.</p>
             </div>
             
             <div class="row g-4 pt-4">
                 <!-- Service 1 -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card bg-white p-4 p-lg-5 rounded-3xl">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card bg-white p-4 rounded-3xl">
                         <div class="service-icon mb-4">
-                            <i class="fas fa-laptop-code"></i>
+                            <i class="fas fa-book-quran"></i>
                         </div>
-                        <h3 class="h4 font-bold mb-3">Full-Stack Architecture</h3>
-                        <p class="text-slate-600 mb-0">Architecting scalable frontend and backend systems using React, Vue, and Node.js for long-term stability.</p>
+                        <h3 class="h4 font-bold mb-3">Aqeedah</h3>
+                        <p class="text-slate-600 mb-0">Systematic exposition of Sunni creed; clarifying misconceptions with textual evidence from the Salaf and Khalaf.</p>
                     </div>
                 </div>
                 
                 <!-- Service 2 -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card bg-white p-4 p-lg-5 rounded-3xl">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card bg-white p-4 rounded-3xl">
                         <div class="service-icon mb-4">
-                            <i class="fas fa-layer-group"></i>
+                            <i class="fas fa-brain"></i>
                         </div>
-                        <h3 class="h4 font-bold mb-3">Experience Strategy (UX)</h3>
-                        <p class="text-slate-600 mb-0">Data-driven design systems that align user behavior with your key performance indicators (KPIs).</p>
+                        <h3 class="h4 font-bold mb-3">Theology</h3>
+                        <p class="text-slate-600 mb-0">Structured, evidence-based argumentation integrating reason and revelation (Aql and Naql).</p>
                     </div>
                 </div>
                 
                 <!-- Service 3 -->
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-card bg-white p-4 p-lg-5 rounded-3xl">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card bg-white p-4 rounded-3xl">
                         <div class="service-icon mb-4">
-                            <i class="fas fa-rocket"></i>
+                            <i class="fas fa-project-diagram"></i>
                         </div>
-                        <h3 class="h4 font-bold mb-3">High-Scale Optimization</h3>
-                        <p class="text-slate-600 mb-0">Advanced tuning for high-traffic environments, focusing on server reduction costs and latency minimization.</p>
+                        <h3 class="h4 font-bold mb-3">Ideologies</h3>
+                        <p class="text-slate-600 mb-0">Critical analysis and refutation of contemporary movements affecting Islamic thought and social cohesion.</p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card bg-white p-4 rounded-3xl">
+                        <div class="service-icon mb-4">
+                            <i class="fas fa-star-and-crescent"></i>
+                        </div>
+                        <h3 class="h4 font-bold mb-3">Tasawwuf</h3>
+                        <p class="text-slate-600 mb-0">Authentic Sunni Sufism rooted in Shariah and orthodox creed; adhering to the Chishti & Qadiri lineages.</p>
                     </div>
                 </div>
             </div>
@@ -196,14 +516,17 @@
                 <div class="col-lg-3 border-end-lg border-slate-100" data-aos="fade-right">
                     <h3 class="h4 font-bold mb-4 px-2">Engagement</h3>
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                            Consultancy
+                        <button class="nav-link active" id="v-pills-lectures-tab" data-bs-toggle="pill" data-bs-target="#v-pills-lectures" type="button" role="tab" aria-controls="v-pills-lectures" aria-selected="true">
+                            Public Lectures
                         </button>
-                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-                            Workshops
+                        <button class="nav-link" id="v-pills-debates-tab" data-bs-toggle="pill" data-bs-target="#v-pills-debates" type="button" role="tab" aria-controls="v-pills-debates" aria-selected="false">
+                            Debates
                         </button>
-                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
-                            Mentorship
+                        <button class="nav-link" id="v-pills-defense-tab" data-bs-toggle="pill" data-bs-target="#v-pills-defense" type="button" role="tab" aria-controls="v-pills-defense" aria-selected="false">
+                            Defense
+                        </button>
+                        <button class="nav-link" id="v-pills-digital-tab" data-bs-toggle="pill" data-bs-target="#v-pills-digital" type="button" role="tab" aria-controls="v-pills-digital" aria-selected="false">
+                            Digital
                         </button>
                     </div>
                 </div>
@@ -211,51 +534,66 @@
                 <div class="col-lg-9 ps-lg-5 pt-3 pt-lg-0">
                     <div class="tab-content" id="v-pills-tabContent">
                         <!-- Tab 1 -->
-                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <div class="tab-pane fade show active" id="v-pills-lectures" role="tabpanel" aria-labelledby="v-pills-lectures-tab">
                             <div class="row align-items-center g-4">
                                 <div class="col-md-7">
-                                    <h3 class="h2 font-bold mb-3 text-slate-800">Strategic Technical Consultancy</h3>
-                                    <p class="text-slate-600 mb-4 text-lg">I partner with companies to define their technical roadmap. From selecting the right stack to architectural reviews, I ensure your technology serves your business goals.</p>
+                                    <h3 class="h2 font-bold mb-3 text-slate-800">Public Lectures</h3>
+                                    <p class="text-slate-600 mb-4 text-lg">Clarity-driven sessions addressing theology, belief systems, and contemporary challenges. Lectures are designed for accessibility without compromising scholarly depth.</p>
                                     <ul class="list-unstyled text-slate-600 space-y-2 mb-4">
-                                        <li class="d-flex align-items-center"><i class="fas fa-check text-emerald me-3"></i> Tech Stack Audits</li>
-                                        <li class="d-flex align-items-center"><i class="fas fa-check text-emerald me-3"></i> Scalability Planning</li>
-                                        <li class="d-flex align-items-center"><i class="fas fa-check text-emerald me-3"></i> Code Quality Assurance</li>
+                                        <li class="d-flex align-items-center"><i class="fas fa-check text-emerald me-3"></i> Quranic Exegesis</li>
+                                        <li class="d-flex align-items-center"><i class="fas fa-check text-emerald me-3"></i> Hadith Methodology</li>
+                                        <li class="d-flex align-items-center"><i class="fas fa-check text-emerald me-3"></i> Community Ethics</li>
                                     </ul>
                                 </div>
                                 <div class="col-md-5">
                                     <div class="tab-img-container">
-                                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consulting meeting" class="object-cover">
+                                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=800&auto=format&fit=crop" alt="Public Lecture" class="object-cover">
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Tab 2 -->
-                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <div class="tab-pane fade" id="v-pills-debates" role="tabpanel" aria-labelledby="v-pills-debates-tab">
                             <div class="row align-items-center g-4">
                                 <div class="col-md-7">
-                                    <h3 class="h2 font-bold mb-3 text-slate-800">Corporate Workshops</h3>
-                                    <p class="text-slate-600 mb-4 text-lg">Empower your internal teams with cutting-edge skills. I conduct intensive workshops on React, modern CSS architectures, and accessible web development practices.</p>
-                                    <a href="#contact" class="btn-outline-custom mt-2">Book a Session</a>
+                                    <h3 class="h2 font-bold mb-3 text-slate-800">Debates & Dialogue</h3>
+                                    <p class="text-slate-600 mb-4 text-lg">Academic, principled engagements with scholars across platforms. Methodological discipline and transparency distinguish these dialogues.</p>
+                                    <a href="#contact" class="btn-outline-custom mt-2">View Schedule</a>
                                 </div>
                                 <div class="col-md-5">
                                     <div class="tab-img-container">
-                                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Workshop presentation" class="object-cover">
+                                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b955?q=80&w=800&auto=format&fit=crop" alt="Debate Session" class="object-cover">
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Tab 3 -->
-                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <div class="tab-pane fade" id="v-pills-defense" role="tabpanel" aria-labelledby="v-pills-defense-tab">
                             <div class="row align-items-center g-4">
                                 <div class="col-md-7">
-                                    <h3 class="h2 font-bold mb-3 text-slate-800">1-on-1 Mentorship</h3>
-                                    <p class="text-slate-600 mb-4 text-lg">For junior developers looking to fast-track their careers. My mentorship program covers code reviews, career pathing, and interview preparation.</p>
+                                    <h3 class="h2 font-bold mb-3 text-slate-800">Defense of Ahl al‑Sunnah</h3>
+                                    <p class="text-slate-600 mb-4 text-lg">Systematic refutations against deviant ideologies. Grounded in Qur'an, authentic Hadith, Ijma', and Qiyas with authoritative references.</p>
                                 </div>
                                 <div class="col-md-5">
                                     <div class="tab-img-container">
-                                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mentoring session" class="object-cover">
+                                        <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=800&auto=format&fit=crop" alt="Scholarly Defense" class="object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- Tab 4 -->
+                         <div class="tab-pane fade" id="v-pills-digital" role="tabpanel" aria-labelledby="v-pills-digital-tab">
+                            <div class="row align-items-center g-4">
+                                <div class="col-md-7">
+                                    <h3 class="h2 font-bold mb-3 text-slate-800">Digital Outreach</h3>
+                                    <p class="text-slate-600 mb-4 text-lg">Traditional Sunni scholarship made accessible via YouTube & Facebook. Curated short clips and full lectures to aid systematic learning.</p>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="tab-img-container">
+                                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop" alt="Digital Content" class="object-cover">
                                     </div>
                                 </div>
                             </div>
@@ -271,11 +609,11 @@
         <div class="container">
             <div class="row mb-5 align-items-end">
                 <div class="col-lg-8" data-aos="fade-right">
-                    <h6 class="text-emerald font-bold tracking-wider uppercase mb-2">Thought Leadership</h6>
-                    <h2 class="h1 font-bold mb-0">Industry Analysis</h2>
+                    <h6 class="text-emerald font-bold tracking-wider uppercase mb-2">Knowledge Archives</h6>
+                    <h2 class="h1 font-bold mb-0">In-depth Lectures</h2>
                 </div>
                 <div class="col-lg-4 text-lg-end mt-3 mt-lg-0" data-aos="fade-left">
-                    <a href="#" class="btn-outline-custom">View Channel <i class="fas fa-arrow-right text-sm"></i></a>
+                    <a href="https://youtube.com/playlist?list=PLVF9SFo83a85_5RnD8QYxh-KGFyjMjy0g&si=cIMBFiz7zooTGVov" target="_blank" class="btn-outline-custom">View Channel <i class="fas fa-arrow-right text-sm"></i></a>
                 </div>
             </div>
 
@@ -286,15 +624,15 @@
                         <div class="blob bg-emerald-200"></div>
                         <div class="card h-100 border-0 shadow-custom-lg rounded-4xl overflow-hidden z-2">
                             <div class="video-thumbnail video-featured-thumb ratio ratio-16x9">
-                                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Coding Tutorial" class="video-featured-img">
+                                <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=800&auto=format&fit=crop" alt="Fundamentals" class="video-featured-img">
                                 <div class="play-overlay">
                                     <i class="fas fa-play-circle play-icon"></i>
                                 </div>
                             </div>
                             <div class="card-body p-4 p-lg-5 video-featured-body bg-white position-relative">
-                                <span class="badge bg-emerald text-white rounded-pill px-3 py-2 mb-3">Featured</span>
-                                <h3 class="h3 font-bold mb-3">Mastering Modern CSS Layouts</h3>
-                                <p class="text-slate-600 mb-0">A deep dive into Grid, Flexbox, and the new Subgrid specification. Learn how to build resilient layouts that work across all viewports.</p>
+                                <span class="badge bg-emerald text-white rounded-pill px-3 py-2 mb-3">Must Watch</span>
+                                <h3 class="h3 font-bold mb-3">Understanding the Fundamentals</h3>
+                                <p class="text-slate-600 mb-0">An exclusive deep dive into the core principles of Aqeedah. In this session, we explore the historical context and modern applications.</p>
                             </div>
                         </div>
                     </div>
@@ -308,7 +646,7 @@
                             <div class="row g-0 h-100">
                                 <div class="col-md-5 position-relative">
                                     <div class="video-thumbnail h-100 ratio ratio-4x3 ratio-md-1x1">
-                                        <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Code Review">
+                                        <img src="https://images.unsplash.com/photo-1576085852415-472e35b7a111?q=80&w=600&auto=format&fit=crop" alt="Hadith Science">
                                         <div class="play-overlay">
                                             <i class="fas fa-play-circle text-white text-4xl opacity-80"></i>
                                         </div>
@@ -317,8 +655,8 @@
                                 <div class="col-md-7">
                                     <div class="card-body p-4 d-flex flex-column justify-content-center h-100">
                                         <div class="text-xs text-emerald-600 font-bold uppercase mb-2">Tutorial</div>
-                                        <h4 class="h5 font-bold mb-2">Clean Code Practices</h4>
-                                        <p class="text-slate-500 text-sm mb-0">Writing maintainable Javascript for large teams.</p>
+                                        <h4 class="h5 font-bold mb-2">The Science of Hadith</h4>
+                                        <p class="text-slate-500 text-sm mb-0">Unlocking the chains of transmission and verifying authenticity.</p>
                                     </div>
                                 </div>
                             </div>
@@ -329,7 +667,7 @@
                             <div class="row g-0 h-100">
                                 <div class="col-md-5 position-relative">
                                     <div class="video-thumbnail h-100 ratio ratio-4x3 ratio-md-1x1">
-                                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Security Tips">
+                                        <img src="https://images.unsplash.com/photo-1548544149-4835e62ee5b3?q=80&w=600&auto=format&fit=crop" alt="Spiritual">
                                         <div class="play-overlay">
                                             <i class="fas fa-play-circle text-white text-4xl opacity-80"></i>
                                         </div>
@@ -337,9 +675,9 @@
                                 </div>
                                 <div class="col-md-7">
                                     <div class="card-body p-4 d-flex flex-column justify-content-center h-100">
-                                        <div class="text-xs text-emerald-600 font-bold uppercase mb-2">Security</div>
-                                        <h4 class="h5 font-bold mb-2">Web Security Basics</h4>
-                                        <p class="text-slate-500 text-sm mb-0">Protecting your client's data from common vulnerabilities.</p>
+                                        <div class="text-xs text-emerald-600 font-bold uppercase mb-2">Spirituality</div>
+                                        <h4 class="h5 font-bold mb-2">Tasawwuf in Modern Age</h4>
+                                        <p class="text-slate-500 text-sm mb-0">Focusing on practical aspects of Tazkiyat al-Nafs.</p>
                                     </div>
                                 </div>
                             </div>
@@ -362,9 +700,9 @@
                     <div class="row gy-5">
                         <div class="col-lg-5" data-aos="fade-right">
                             <h6 class="text-emerald-400 font-bold tracking-wider uppercase mb-3">Get In Touch</h6>
-                            <h2 class="h1 font-bold mb-4">Let's build something extraordinary.</h2>
+                            <h2 class="h1 font-bold mb-4">Invite for Lectures</h2>
                             <p class="text-slate-400 mb-5 text-lg">
-                                Ready to start your next project? Fill out the form or reach out directly via email.
+                                Send a message for invitations, scholarly inquiries, or debate proposals.
                             </p>
                             
                             <div class="d-flex align-items-center mb-4">
@@ -373,7 +711,7 @@
                                 </div>
                                 <div>
                                     <div class="text-slate-400 text-sm">Email</div>
-                                    <div class="font-medium">hello@expertdev.com</div>
+                                    <div class="font-medium">bilalshajamali@gmail.com</div>
                                 </div>
                             </div>
                             
@@ -383,26 +721,33 @@
                                 </div>
                                 <div>
                                     <div class="text-slate-400 text-sm">Location</div>
-                                    <div class="font-medium">San Francisco, CA</div>
+                                    <div class="font-medium">India / Global</div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-7" data-aos="fade-left">
                             <div class="bg-white p-4 p-lg-5 rounded-4xl text-slate-800 shadow-custom-2xl">
-                                <form>
+                                <form action="https://formsubmit.co/bilalshajamali@gmail.com" method="POST">
+                                    <input type="text" name="_honey" style="display:none">
+                                    <input type="hidden" name="_subject" value="New Contact Form Submission">
+                                    
                                     <div class="row g-3">
                                         <div class="col-md-6">
                                             <label class="form-label text-sm font-bold text-slate-500 uppercase">Name</label>
-                                            <input type="text" class="contact-input" placeholder="John Doe">
+                                            <input type="text" name="name" class="contact-input" placeholder="Your Name" required>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="form-label text-sm font-bold text-slate-500 uppercase">Email</label>
-                                            <input type="email" class="contact-input" placeholder="john@example.com">
+                                            <input type="email" name="email" class="contact-input" placeholder="email@example.com" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label text-sm font-bold text-slate-500 uppercase">Subject</label>
+                                            <input type="text" name="subject" class="contact-input" placeholder="Invitation / Inquiry" required>
                                         </div>
                                         <div class="col-12">
                                             <label class="form-label text-sm font-bold text-slate-500 uppercase">Message</label>
-                                            <textarea class="contact-input" rows="4" placeholder="Tell me about your project..."></textarea>
+                                            <textarea name="message" class="contact-input" rows="4" placeholder="How can we collaborate?" required></textarea>
                                         </div>
                                         <div class="col-12 mt-4">
                                             <button type="submit" class="contact-submit-btn">
@@ -424,15 +769,15 @@
         <div class="container">
             <div class="row align-items-center gy-4">
                 <div class="col-md-6 text-center text-md-start">
-                    <span class="font-bold text-xl text-slate-800">Dev<span class="text-emerald">Expert</span></span>
-                    <p class="text-slate-500 text-sm mt-2 mb-0">&copy; 2023 Expert Developer. All rights reserved.</p>
+                    <span class="font-bold text-xl text-slate-800">Bilalsha <span class="text-emerald">Tanur</span></span>
+                    <p class="text-slate-500 text-sm mt-2 mb-0">&copy; 2024 Bilalsha Jamali Nizami Tanur. All rights reserved.</p>
                 </div>
                 <div class="col-md-6">
                     <div class="d-flex justify-content-center justify-content-md-end gap-3">
+                        <a href="https://www.youtube.com/@ishqemaskan9026" class="social-link yt"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/share/1CKQmBtL4p/?mibextid=wwXIfr" class="social-link fb"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/bilalsha__tnr?igsh=a2oyaXBiMXoxOG0=" class="social-link ig"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-link tw"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link fb"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link ig"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link yt"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -465,7 +810,7 @@
             }
         });
 
-        // Smooth Scroll for Anchors (Hardened for all browsers)
+        // Smooth Scroll for Anchors
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -474,14 +819,12 @@
                 
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    // Close mobile menu if open
                     const navbarToggler = document.querySelector('.navbar-toggler');
                     const navbarCollapse = document.querySelector('.navbar-collapse');
                     if (navbarCollapse.classList.contains('show')) {
                         navbarToggler.click();
                     }
 
-                    // Calculate offset for fixed header
                     const headerOffset = 80;
                     const elementPosition = targetElement.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
